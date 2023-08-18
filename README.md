@@ -7,7 +7,7 @@ Features list:
 
 # Basic:
 -[]Create interface for the product list
--[]Have a list of products
+-[x]Have a list of products
 -[]Be able to add an item to the product list
 -[]Add quantity of items to the product list
 -[]Be able to change the quantity of items of a specific product
