@@ -1,0 +1,48 @@
+[
+    {
+        "id": "001",
+        "nome": "Keyboard Gamer",
+        "marca": "Generico"
+
+    },
+    {
+        "id": "002",
+        "nome": "Mouse Gamer",
+        "marca": "Generico"
+    },
+    {
+        "id": "003",
+        "nome": "Tablet",
+        "marca": "Samsumg"
+    },
+    {
+        "id": "004",
+        "nome": "Monitor 4k",
+        "marca": "LG"
+    },
+    {
+        "id": "005",
+        "nome": "Laptop",
+        "marca": "Acer"
+    },
+    {
+        "id": "006",
+        "nome": "Printer",
+        "marca": "Generico"
+    },
+    {
+        "id": "007",
+        "nome": "Wireless modldem",
+        "marca": "Tp-link"
+    },
+    {
+        "id": "008",
+        "nome": "Speaker Gamer",
+        "marca": "Hyper-X"
+    },
+    {
+        "id": "009",
+        "nome": "Flash Driver",
+        "marca": "Tp-link"
+    }
+]
