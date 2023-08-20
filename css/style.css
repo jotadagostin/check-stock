@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.control {
+    width: 80vw;
+    margin: 10vh auto 0;
+    background-color: gray;
+    border: 2px solid darkgray;
+    padding: 1em;
+    border-radius: 15px 15px 0 0;
+}
+
+.title {
+
+}
+
+.add {
+
+}
+
+.search {
+
+}

@@ -2,13 +2,13 @@
     {
         "id": "001",
         "nome": "Keyboard Gamer",
-        "marca": "Generico"
+        "marca": "Generic"
 
     },
     {
         "id": "002",
         "nome": "Mouse Gamer",
-        "marca": "Generico"
+        "marca": "Generic"
     },
     {
         "id": "003",
@@ -28,7 +28,7 @@
     {
         "id": "006",
         "nome": "Printer",
-        "marca": "Generico"
+        "marca": "Generic"
     },
     {
         "id": "007",

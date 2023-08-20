@@ -6,7 +6,7 @@ Features list:
 "Consumption of some API"
 
 # Basic:
--[]Create interface for the product list
+-[x]Create interface for the product list
 -[x]Have a list of products
 -[]Be able to add an item to the product list
 -[]Add quantity of items to the product list
