@@ -1,26 +1,60 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .control {
-    width: 80vw;
-    margin: 10vh auto 0;
-    background-color: gray;
-    border: 2px solid darkgray;
-    padding: 1em;
-    border-radius: 15px 15px 0 0;
+  width: 80vw;
+  /* using vw to avoid scroll */
+  margin: 10vh auto 0;
+  background-color: gray;
+  border: 2px solid darkgray;
+  padding: 1em;
+  border-radius: 15px 15px 0 0;
+  display: flex;
 }
 
 .title {
-
+  margin: 0;
+  flex-grow: 1;
 }
 
 .add {
-
 }
 
 .search {
+}
 
+.content {
+   width: 82vw;
+  /* using vw to avoid scroll */
+  margin: 0 auto 10vh;
+  background-color: #eee;
+  border: 2px solid gray;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+}
+
+
+.content th,
+.content td {
+    text-align: left;
+    padding: 5px 10px 5px 5px;
+}
+
+.topic {
+    color: white;
+}
+
+ .topic th {
+    background-color: rgb(35, 32, 32);
+}
+
+.content tr:nth-child(odd) {
+  background-color: #aaa;
+}
+
+.content tr:nth-child(even) {
+  background-color: #888;
 }
