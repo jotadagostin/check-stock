@@ -8,7 +8,8 @@ Features list:
 # Basic:
 -[x]Create interface for the product list
 -[x]Have a list of products
--[]Be able to add an item to the product list
+-[]Be able to add an item to the product list-read the list of products
+-[] Conect the list with the file API.
 -[]Add quantity of items to the product list
 -[]Be able to change the quantity of items of a specific product
 -[]Be able to delete the quantity of items of a specific product
