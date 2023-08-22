@@ -2,23 +2,27 @@
     {
         "id": "001",
         "nome": "Keyboard Gamer",
-        "marca": "Generic"
+        "marca": "Generic",
+        "qtd": "1"
 
     },
     {
         "id": "002",
         "nome": "Mouse Gamer",
-        "marca": "Generic"
+        "marca": "Generic",
+        "qtd": "1"
     },
     {
         "id": "003",
         "nome": "Tablet",
-        "marca": "Samsumg"
+        "marca": "Samsumg",
+        "qtd": "1"
     },
     {
         "id": "004",
         "nome": "Monitor 4k",
-        "marca": "LG"
+        "marca": "LG",
+        "qtd": "1"
     },
     {
         "id": "005",
@@ -28,21 +32,25 @@
     {
         "id": "006",
         "nome": "Printer",
-        "marca": "Generic"
+        "marca": "Generic",
+        "qtd": "1"
     },
     {
         "id": "007",
         "nome": "Wireless modldem",
-        "marca": "Tp-link"
+        "marca": "Tp-link",
+        "qtd": "1"
     },
     {
         "id": "008",
         "nome": "Speaker Gamer",
-        "marca": "Hyper-X"
+        "marca": "Hyper-X",
+        "qtd": "1"
     },
     {
         "id": "009",
         "nome": "Flash Driver",
-        "marca": "Tp-link"
+        "marca": "Tp-link",
+        "qtd": "1"
     }
 ]
