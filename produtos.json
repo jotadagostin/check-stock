@@ -37,7 +37,7 @@
     },
     {
         "id": "0007",
-        "name": "Wireless modldem",
+        "name": "Wireless moldem",
         "brand": "Tp-link",
         "qtd": "1"
     },
@@ -50,7 +50,7 @@
     {
         "id": "0009",
         "name": "Flash Driver",
-        "brand": "Tp-link",
+        "brand": "TP-link",
         "qtd": "1"
     }
 ]
