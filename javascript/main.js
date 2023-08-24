@@ -27,3 +27,21 @@ request().then(function (response) {
     contentTable.appendChild(tr);
   });
 });
+
+async function createItem(item) {
+  try {
+    const response = await fetch(baseURL + "cadastroProdutos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+    });
+    return response.json();
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+cadastroProdutos
