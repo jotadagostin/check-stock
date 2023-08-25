@@ -9,3 +9,22 @@ let item = {
   marca: "",
   qtd: 0,
 };
+
+busca.addEventListener("input", () => {
+  console.log(busca.value);
+
+  document.querySelector("tr").forEach((e) => {
+    e.hidden = true;
+  });
+  const nome = document.querySelector("nome-produto");
+  const marcas = document.querySelector(".produto-marca");
+  const valores = [...nome, ...marcas];
+
+  valores.forEach((e) => {
+    if (e.textContent.toLowerCase().includes(busca.value.toLowerCase())) {
+      e.parentNode.hidden = false;
+    }
+  });
+});
+
+
