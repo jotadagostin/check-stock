@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock Control</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="control">
-      <h1 class="title">Stock Control</h1>
-      <button class="add">+</button>
-      <input type="search" class="search" />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de estoque</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="controle">
+        <h1 class="titulo">Controle de estoque</h1>
+        <button class="adicionar" id="adicionar-produto">+</button>
+        <input class="busca" id="busca" type="search">
     </header>
     <main>
-      <form action="" class="cadastro">
-        <input type="text" id="name" placeholder="Product name" class="cadastro-campo">
-        <input type="text" id="brand" placeholder="Brand" class="cadastro-campo">
-        <input type="number" id="qtd" placeholder="Quantity" class="cadastro-campo">
-        <input type="submit" id="qtd" value="submit" class="cadastro-envio">
-      </form>
-      <table class="content">
-        <thead class="topic">
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Quantity</th>
-            <th>Options</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+        <form class="cadastro" id="cadastro">
+            <input type="text" class="cadastro-campo" name="nome" placeholder="Nome do produto">
+            <input type="text" class="cadastro-campo" name="marca" placeholder="Marca">
+            <input type="number" class="cadastro-campo" name="qtd" placeholder="Quantidade">
+            <input type="submit" class="cadastro-envio" id="submit" value="Cadastrar">
+        </form>
+        <table class="conteudo" id="conteudo">
+            <thead class="topico">
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Qtd</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </main>
-
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/config.js"></script>
-  </body>
+    <script src="js/main.js"></script>
+</body>
 </html>

@@ -1,73 +1,76 @@
-body {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
 
-main,
-.control {
-  width: 80vw;
-  margin: 0 auto 10vh;
+body {
+  margin: 0;
+  padding: 10vh 0 0;
 }
 
-.control {
-  background-color: gray;
-  border: 2px solid darkgray;
+main, .controle {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.controle {
+  background: #ccc;
+  border: 2px solid #333;
   padding: 1em;
   border-radius: 15px 15px 0 0;
   display: flex;
 }
 
-.title {
+.titulo {
   margin: 0;
   flex-grow: 1;
 }
 
-.add {
+.adicionar {
+  
 }
 
-.search {
+.busca {
+  
 }
 
-.content {
-  width: 82vw;
-  /* using vw to avoid scroll */
-  margin: 0 auto 10vh;
-  background-color: #eee;
-  border: 2px solid gray;
+.conteudo {
+  background: #eee;
+  border: 2px solid #333;
   border-top: none;
   border-radius: 0 0 15px 15px;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.content th,
-.content td {
+.conteudo th, .conteudo td {
   text-align: left;
-  padding: 5px 10px 5px 5px;
+  padding: 5px 10px 5px 5px; 
 }
 
-.topic {
-  color: white;
+.topico {
+  color: #eee;
 }
 
-.topic th {
-  background-color: rgb(35, 32, 32);
+.topico th {
+  background: #333;    
 }
 
-.content tr:nth-child(odd) {
+.conteudo tr:nth-child(odd) {
   background-color: #eee;
 }
 
-.content tr:nth-child(even) {
-  background-color: #aaa;
+.conteudo tr:nth-child(even) {
+  background-color: #ccc;
 }
 
-/* form cadastro */
+/* form de cadastro */
 
 .cadastro {
+  padding: 5px;
+  border: 2px solid #000;
+  display: none;
 }
 
-.cadastro-campo {
-}
-
-.cadastro-envio {
+.cadastro-ativo {
+  display: block;
 }
