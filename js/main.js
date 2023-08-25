@@ -27,4 +27,22 @@ busca.addEventListener("input", () => {
   });
 });
 
+adicionar.addEventListener("click", () => {
+  cadastro.classList.toggle("cadastro-ativo");
+});
 
+cadastro.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  item.nome = e.target.querySelector("[name=nome]").value;
+  item.marca = e.target.querySelector("[name=marca]").value;
+  item.qtd = e.target.querySelector("[name=qtd]").value;
+
+  createItem(item).then(function (response) {
+    console.log(response);
+  });
+
+  getProdutos().then(function (response) {
+    criaItens(response);
+  });
+});
