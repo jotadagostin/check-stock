@@ -4,10 +4,13 @@ body {
   box-sizing: border-box;
 }
 
+main,
 .control {
   width: 80vw;
-  /* using vw to avoid scroll */
-  margin: 10vh auto 0;
+  margin: 0 auto 10vh;
+}
+
+.control {
   background-color: gray;
   border: 2px solid darkgray;
   padding: 1em;
@@ -27,7 +30,7 @@ body {
 }
 
 .content {
-   width: 82vw;
+  width: 82vw;
   /* using vw to avoid scroll */
   margin: 0 auto 10vh;
   background-color: #eee;
@@ -36,19 +39,18 @@ body {
   border-radius: 0 0 15px 15px;
 }
 
-
 .content th,
 .content td {
-    text-align: left;
-    padding: 5px 10px 5px 5px;
+  text-align: left;
+  padding: 5px 10px 5px 5px;
 }
 
 .topic {
-    color: white;
+  color: white;
 }
 
- .topic th {
-    background-color: rgb(35, 32, 32);
+.topic th {
+  background-color: rgb(35, 32, 32);
 }
 
 .content tr:nth-child(odd) {
@@ -57,4 +59,15 @@ body {
 
 .content tr:nth-child(even) {
   background-color: #aaa;
+}
+
+/* form cadastro */
+
+.cadastro {
+}
+
+.cadastro-campo {
+}
+
+.cadastro-envio {
 }

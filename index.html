@@ -12,19 +12,28 @@
       <button class="add">+</button>
       <input type="search" class="search" />
     </header>
-    <table class="content">
-      <thead class="topic">
-        <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Brand</th>
-          <th>Quantity</th>
-          <th>Options</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <main>
+      <form action="" class="cadastro">
+        <input type="text" id="name" placeholder="Product name" class="cadastro-campo">
+        <input type="text" id="brand" placeholder="Brand" class="cadastro-campo">
+        <input type="number" id="qtd" placeholder="Quantity" class="cadastro-campo">
+        <input type="submit" id="qtd" value="submit" class="cadastro-envio">
+      </form>
+      <table class="content">
+        <thead class="topic">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Quantity</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
 
     <script src="/javascript/main.js"></script>
+    <script src="/javascript/config.js"></script>
   </body>
 </html>
