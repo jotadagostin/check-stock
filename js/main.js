@@ -84,3 +84,20 @@ conteudo.addEventListener("click", (e) => {
   // }
   // }
 })
+
+async function createItem(item) {
+  try {
+    const response = await fetch(baseURL + "cadastroProdutos", {
+      mehot: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+
+    });
+    return response.json()
+  } catch(error) {
+    console.log(error);
+    throw error;
+  }
+}
