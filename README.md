@@ -8,18 +8,18 @@ Features list:
 # Basic:
 -[x]Create interface for the product list
 -[x]Have a list of products
--[]Be able to add an item to the product list-read the list of products
--[] Conect the list with the file API.
--[]Add quantity of items to the product list
--[]Be able to change the quantity of items of a specific product
--[]Be able to delete the quantity of items of a specific product
--[]Consult an item in the product list to know the quantity available
+-[x]Be able to add an item to the product list-read the list of products
+-[x] Conect the list with the file API.
+-[x]Add quantity of items to the product list
+-[x]Be able to change the quantity of items of a specific product
+-[x]Be able to delete the quantity of items of a specific product
+-[x]Consult an item in the product list to know the quantity available
 
 ## Advanced:
--[]Be able to add a minimum and maximum limit for each item of the product list
--[]routine to verify if some quantity of items is below the minimum limit
+-[x]Be able to add a minimum and maximum limit for each item of the product list
+-[x]routine to verify if some quantity of items is below the minimum limit
 
 ### Extra:
--[]Storage each transaction in the list of products
+-[x]Storage each transaction in the list of products
 
 
