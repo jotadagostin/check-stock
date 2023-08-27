@@ -1,62 +1,65 @@
-const baseURL = "http://localhost:3000/"
-const conteudo_tabela = document.querySelector('.conteudo tbody')
-const adicionar = document.querySelector('#adicionar-produto')
-const cadastro = document.querySelector('#cadastro')
-const conteudo = document.querySelector('#conteudo')
-const busca = document.querySelector('#busca')
+const baseURL = "http://localhost:3000/";
+const conteudo_tabela = document.querySelector(".conteudo tbody");
+const adicionar = document.querySelector("#adicionar-produto");
+const cadastro = document.querySelector("#cadastro");
+const conteudo = document.querySelector("#conteudo");
+const busca = document.querySelector("#busca");
 let item = {
   nome: "",
-  marca: "",  
-  qtd: 0
-}
+  marca: "",
+  qtd: 0,
+};
 
-busca.addEventListener('input', () => { 
-  console.log(busca.value)
+busca.addEventListener("input", () => {
+  console.log(busca.value);
 
-  document.querySelectorAll("tr").forEach( (e) => { e.hidden=true})
-  const nomes = document.querySelectorAll(".produto-nome")
-  const marcas = document.querySelectorAll(".produto-marca")
-  const valores = [...nomes, ...marcas]
-  
-  valores.forEach( (e) => {
-    if(e.textContent.toLowerCase().includes(busca.value.toLowerCase())) {
-      e.parentNode.hidden=false
+  document.querySelectorAll("tr").forEach((e) => {
+    e.hidden = true;
+  });
+  const nomes = document.querySelectorAll(".produto-nome");
+  const marcas = document.querySelectorAll(".produto-marca");
+  const valores = [...nomes, ...marcas];
+
+  valores.forEach((e) => {
+    if (e.textContent.toLowerCase().includes(busca.value.toLowerCase())) {
+      e.parentNode.hidden = false;
     }
-  })
-})
+  });
+});
 
-adicionar.addEventListener('click', () => {
-  cadastro.classList.toggle('cadastro-ativo')
-})
+adicionar.addEventListener("click", () => {
+  cadastro.classList.toggle("cadastro-ativo");
+});
 
-cadastro.addEventListener('submit', (e) => {
+cadastro.addEventListener("submit", (e) => {
   e.preventDefault();
-  
-  item.nome = e.target.querySelector('[name=nome]').value
-  item.marca = e.target.querySelector('[name=marca]').value
-  item.qtd = e.target.querySelector('[name=qtd]').value
 
-  createItem(item).then(function(response) {
-    console.log(response)
+  item.nome = e.target.querySelector("[name=nome]").value;
+  item.marca = e.target.querySelector("[name=marca]").value;
+  item.qtd = e.target.querySelector("[name=qtd]").value;
 
-    getProdutos().then(function(response) {
-      criaItens(response)
+  createItem(item).then(function (response) {
+    console.log(response);
+
+    getProdutos().then(function (response) {
+      criaItens(response);
     });
-  })
-})
+  });
+});
 
 conteudo.addEventListener("click", (e) => {
-  if(e.target.className=='remover-item') {
-    const id = e.target.parentNode.parentNode.querySelector('.produto-id').textContent
+  if (e.target.className == "remover-item") {
+    const id =
+      e.target.parentNode.parentNode.querySelector(".produto-id").textContent;
 
-    deleteItem(id).then(function(response) {
-      console.log(response)
-      
-      getProdutos().then(function(response) {
-        console.log('atualizando')
-        criaItens(response)
+    deleteItem(id).then(function (response) {
+      console.log(response);
+
+      getProdutos().then(function (response) {
+        console.log("atualizando");
+        criaItens(response);
       });
-    })  
+    });
   }
 
   // Falta documentação de endpoint para atualizar quantidade
@@ -71,7 +74,7 @@ conteudo.addEventListener("click", (e) => {
   //   } else {
   //     const novoValorItemEditado = ItemEditado.querySelector('input').value
   //     ItemEditado.innerHTML = novoValorItemEditado
-  //     e.target.textContent = "Editar"    
+  //     e.target.textContent = "Editar"
 
   //     item.nome = e.target.parentNode.parentNode.querySelector('.produto-nome').textContent
   //     item.marca = e.target.parentNode.parentNode.querySelector('.produto-marca').textContent
@@ -83,7 +86,7 @@ conteudo.addEventListener("click", (e) => {
   //     // });
   // }
   // }
-})
+});
 
 async function createItem(item) {
   try {
@@ -93,11 +96,44 @@ async function createItem(item) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(item),
-
     });
-    return response.json()
-  } catch(error) {
+    return response.json();
+  } catch (error) {
     console.log(error);
     throw error;
   }
 }
+
+function criaItens(dados) {
+  console.log("chegou na criaItens");
+  conteudo_tabela.innerHTML = "";
+  console.log(conteudo_tabela);
+  dados.forEach((produto) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="produto-id">${produto.id}</td>
+      <td class="produto-nome">${produto.nome}</td>
+      <td class="produto-marca">${produto.marca}</td>
+      <td class="produto-qtd">${produto.qtd}</td>
+      <td>
+        <button class="editar-item">Editar</button>
+        <button class="remover-item">Remover item</button>
+      </td>
+      `;
+    conteudo_tabela.appendChild(tr);
+  });
+}
+
+async function deleteItem(id) {
+  try {
+    const response = await fetch(baseURL + "cadastoProdutos" + "/" + id, {
+      method: "DELETE",
+    });
+    return response.json();
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+
