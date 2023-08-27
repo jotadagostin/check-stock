@@ -136,4 +136,15 @@ async function deleteItem(id) {
   }
 }
 
+async function getProdutos() {
+  try {
+    const response = await fetch(baseURL + "cadastroProdutos");
+    return response.json();
+  } catch (e) {
+    console.error(e);
+  }
+}
 
+getProdutos().then(function (response) {
+  criaItens(response);
+});
